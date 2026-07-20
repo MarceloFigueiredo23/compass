@@ -160,25 +160,68 @@
     .plan-hero ul li { font-size: 0.88rem; color: var(--muted); padding: 0.2rem 0 0.2rem 1rem; position: relative; }
     .plan-hero ul li::before { content: "·"; position: absolute; left: 0; color: #fff; font-weight: 700; }
     .contract-table {
-      width: 100%; border-collapse: collapse; margin-top: 0.85rem; text-align: left;
-      font-size: clamp(0.85rem, 1.8vh, 0.95rem);
+      width: 100%; border-collapse: collapse; margin-top: 0.65rem; text-align: left;
+      font-size: clamp(0.82rem, 1.7vh, 0.92rem);
     }
     .contract-table th, .contract-table td {
-      padding: 0.45rem 0.55rem; border-bottom: 1px solid rgba(255,255,255,0.18);
+      padding: 0.4rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.18);
       color: var(--muted);
     }
-    .contract-table th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #ffe0e0; font-weight: 700; }
+    .contract-table th { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: #ffe0e0; font-weight: 700; }
     .contract-table td strong { color: #fff; }
     .contract-table tr.total td {
-      border-bottom: none; padding-top: 0.7rem; font-weight: 700; color: #fff;
-      font-family: Outfit, sans-serif; font-size: 1.05rem;
+      border-bottom: none; padding-top: 0.6rem; font-weight: 700; color: #fff;
+      font-family: Outfit, sans-serif; font-size: 1rem;
     }
     .contract-table .num { text-align: right; white-space: nowrap; color: #fff; font-weight: 600; }
     .booking-pill {
-      display: inline-block; margin-top: 0.75rem; padding: 0.45rem 0.9rem; border-radius: 999px;
+      display: inline-block; margin-top: 0.55rem; padding: 0.4rem 0.85rem; border-radius: 999px;
       background: rgba(93,255,168,0.18); border: 1px solid rgba(93,255,168,0.45);
-      color: var(--ok); font-size: 0.88rem; font-weight: 700;
+      color: var(--ok); font-size: 0.85rem; font-weight: 700;
     }
+    #investimento .inner.glass { max-width: 980px; padding: clamp(1rem, 2.5vh, 1.5rem) clamp(1.1rem, 3vw, 1.75rem); }
+    #investimento h2 { font-size: clamp(1.35rem, 3.2vh, 1.85rem); }
+    .vision-grid {
+      display: grid; grid-template-columns: 1fr 1.35fr; gap: 0.75rem; margin-top: 0.65rem;
+    }
+    @media (max-width: 800px) { .vision-grid { grid-template-columns: 1fr; } }
+    .vision-card {
+      border-radius: 16px; padding: 0.9rem 1rem;
+      background: rgba(0,0,0,0.22); border: 1px solid rgba(255,255,255,0.2);
+      text-align: left;
+    }
+    .vision-card.now { opacity: 0.88; }
+    .vision-card.next {
+      background: rgba(255,255,255,0.16); border: 1.5px solid rgba(255,255,255,0.55);
+    }
+    .vision-card h3 {
+      font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.45rem; color: #ffe0e0;
+    }
+    .vision-card.next h3 { color: var(--ok); }
+    .vision-card .fee-line {
+      font-family: Outfit, sans-serif; font-weight: 800; font-size: clamp(1.25rem, 3vh, 1.6rem);
+      color: #fff; margin-bottom: 0.5rem;
+    }
+    .vision-card .fee-line small { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+    .vision-card ul { list-style: none; margin: 0; }
+    .vision-card ul li {
+      font-size: clamp(0.78rem, 1.6vh, 0.88rem); color: var(--muted-soft);
+      padding: 0.18rem 0 0.18rem 0.9rem; position: relative; line-height: 1.35;
+    }
+    .vision-card ul li::before { content: "·"; position: absolute; left: 0; color: #fff; font-weight: 700; }
+    .vision-card ul li strong { color: #fff; }
+    .pay-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; margin-top: 0.75rem;
+    }
+    @media (max-width: 700px) { .pay-row { grid-template-columns: 1fr; } }
+    .pay-box {
+      border-radius: 14px; padding: 0.75rem 0.9rem; text-align: left;
+      background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.25);
+    }
+    .pay-box .lbl { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: #ffe0e0; font-weight: 700; }
+    .pay-box .val { font-family: Outfit, sans-serif; font-weight: 800; font-size: 1.2rem; color: #fff; margin-top: 0.2rem; }
+    .pay-box .hint { font-size: 0.78rem; color: var(--muted-soft); margin-top: 0.2rem; }
     .cta-box {
       margin-top: 0.85rem; padding: 1rem 1.15rem; border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.35); background: rgba(255,255,255,0.1);
@@ -409,50 +452,76 @@
 
     <section id="investimento" data-slide="7">
       <div class="inner glass">
-        <p class="eyebrow">Investimento · Contrato atualizado</p>
-        <h2>Growth Pack + SEO Essencial · booking 12×</h2>
+        <p class="eyebrow">Investimento · Visão do contrato</p>
+        <h2>Como fica o contrato atualizado</h2>
         <div class="gold-line"></div>
-        <article class="plan-hero">
-          <div class="plan-label">EXECUTAR · Visão do contrato · 12 meses</div>
-          <h3>Fee total mensal</h3>
-          <p class="plan-sub">Âncora auditoria SEO/GEO: R$ 6.500/mês · 8 posts — aqui 50% de valor e escopo</p>
-          <div class="plan-price">R$ 8.450 <small>/mês</small></div>
-          <p class="plan-total">TCV 12 meses: <strong style="color:#fff">R$ 101.400</strong></p>
-          <span class="booking-pill">Booking · 12× de R$ 8.450 no cartão</span>
-          <table class="contract-table" aria-label="Composição do contrato">
-            <thead>
-              <tr>
-                <th>Linha</th>
-                <th class="num">Mensal</th>
-                <th class="num">12 meses</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Growth Pack</strong> · mídia + funil (contrato atual)</td>
-                <td class="num">R$ 5.200</td>
-                <td class="num">R$ 62.400</td>
-              </tr>
-              <tr>
-                <td><strong>SEO/GEO Essencial</strong> · 50% da auditoria (4 posts · 8h)</td>
-                <td class="num">R$ 3.250</td>
-                <td class="num">R$ 39.000</td>
-              </tr>
-              <tr class="total">
-                <td>Total contrato atualizado</td>
-                <td class="num">R$ 8.450</td>
-                <td class="num">R$ 101.400</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-            <li>Verba de mídia (~R$ 5k) continua à parte do fee</li>
-            <li>Kickoff SEO em até 5 dias úteis após assinatura</li>
-            <li>Upgrade para full (8 posts · R$ 6.500) fica como expansão futura</li>
-          </ul>
-        </article>
+
+        <div class="vision-grid">
+          <article class="vision-card now">
+            <h3>Hoje</h3>
+            <div class="fee-line">R$ 5.200 <small>/mês</small></div>
+            <ul>
+              <li><strong>Growth Pack 3.0</strong> · Inside Sales</li>
+              <li>Mídia Meta + Google (funil Pipedrive)</li>
+              <li>Time: AM, GP, GT, copy e design</li>
+              <li>Motor 1 ativo — busca orgânica ausente</li>
+            </ul>
+          </article>
+          <article class="vision-card next">
+            <h3>Contrato atualizado · 12 meses</h3>
+            <div class="fee-line">R$ 8.450 <small>/mês fee</small></div>
+            <ul>
+              <li><strong>Growth Pack</strong> R$ 5.200 — mídia + funil (mantém)</li>
+              <li><strong>SEO/GEO Essencial</strong> R$ 3.250 — 50% da auditoria</li>
+              <li>4 posts/mês (2 novos + 2 atualizações) · ~8h</li>
+              <li>On-page + schema/GEO + Perfil Google fábrica</li>
+              <li>Dois motores: pago + orgânico no mesmo squad</li>
+            </ul>
+          </article>
+        </div>
+
+        <table class="contract-table" aria-label="Composição do contrato">
+          <thead>
+            <tr>
+              <th>Composição do fee</th>
+              <th class="num">Mensal</th>
+              <th class="num">TCV 12 meses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Growth Pack</strong> · contrato atual</td>
+              <td class="num">R$ 5.200</td>
+              <td class="num">R$ 62.400</td>
+            </tr>
+            <tr>
+              <td><strong>SEO/GEO Essencial</strong> · metade da auditoria (âncora R$ 6.500)</td>
+              <td class="num">R$ 3.250</td>
+              <td class="num">R$ 39.000</td>
+            </tr>
+            <tr class="total">
+              <td>Total fee V4</td>
+              <td class="num">R$ 8.450</td>
+              <td class="num">R$ 101.400</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pay-row">
+          <div class="pay-box">
+            <div class="lbl">Booking</div>
+            <div class="val">12× de R$ 8.450</div>
+            <div class="hint">Cartão de crédito · TCV R$ 101.400</div>
+          </div>
+          <div class="pay-box">
+            <div class="lbl">À parte do fee</div>
+            <div class="val">Mídia ~R$ 5.000/mês</div>
+            <div class="hint">Meta + Google · continua como hoje</div>
+          </div>
+        </div>
+
         <div class="cta-box">
-          <p>Fechar o <strong>contrato atualizado em booking 12×</strong> — Growth Pack que já breakevou + SEO Essencial para o segundo motor. Alinhar até <strong>julho de 2026</strong>.</p>
+          <p>Assinar o <strong>contrato atualizado em booking 12×</strong>: Growth Pack que já breakevou + SEO Essencial (segundo motor). Kickoff em até 5 dias úteis · alinhar até <strong>julho de 2026</strong>.</p>
         </div>
       </div>
     </section>
