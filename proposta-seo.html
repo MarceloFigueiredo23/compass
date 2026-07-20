@@ -145,20 +145,40 @@
     .contrast-card.bad h3 { color: var(--bad); }
     .contrast-card.good h3 { color: var(--ok); }
     .plan-hero {
-      max-width: 560px; margin: 0.85rem auto 0;
-      border-radius: 22px; padding: 1.5rem 1.6rem;
+      max-width: 640px; margin: 0.85rem auto 0;
+      border-radius: 22px; padding: 1.35rem 1.5rem;
       border: 2px solid #fff; background: rgba(255,255,255,0.22);
       box-shadow: 0 12px 40px rgba(80,0,0,0.3); text-align: center;
     }
     .plan-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #ffe8e8; margin-bottom: 0.35rem; }
     .plan-hero h3 { font-size: 1.35rem; margin-bottom: 0.35rem; }
     .plan-sub { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.75rem; }
-    .plan-price { font-family: Outfit; font-size: 2.5rem; font-weight: 800; line-height: 1; }
+    .plan-price { font-family: Outfit; font-size: 2.35rem; font-weight: 800; line-height: 1; }
     .plan-price small { font-size: 0.9rem; font-weight: 600; color: var(--muted); }
     .plan-total { font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem; }
-    .plan-hero ul { list-style: none; margin-top: 1rem; text-align: left; }
+    .plan-hero ul { list-style: none; margin-top: 0.85rem; text-align: left; }
     .plan-hero ul li { font-size: 0.88rem; color: var(--muted); padding: 0.2rem 0 0.2rem 1rem; position: relative; }
     .plan-hero ul li::before { content: "·"; position: absolute; left: 0; color: #fff; font-weight: 700; }
+    .contract-table {
+      width: 100%; border-collapse: collapse; margin-top: 0.85rem; text-align: left;
+      font-size: clamp(0.85rem, 1.8vh, 0.95rem);
+    }
+    .contract-table th, .contract-table td {
+      padding: 0.45rem 0.55rem; border-bottom: 1px solid rgba(255,255,255,0.18);
+      color: var(--muted);
+    }
+    .contract-table th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #ffe0e0; font-weight: 700; }
+    .contract-table td strong { color: #fff; }
+    .contract-table tr.total td {
+      border-bottom: none; padding-top: 0.7rem; font-weight: 700; color: #fff;
+      font-family: Outfit, sans-serif; font-size: 1.05rem;
+    }
+    .contract-table .num { text-align: right; white-space: nowrap; color: #fff; font-weight: 600; }
+    .booking-pill {
+      display: inline-block; margin-top: 0.75rem; padding: 0.45rem 0.9rem; border-radius: 999px;
+      background: rgba(93,255,168,0.18); border: 1px solid rgba(93,255,168,0.45);
+      color: var(--ok); font-size: 0.88rem; font-weight: 700;
+    }
     .cta-box {
       margin-top: 0.85rem; padding: 1rem 1.15rem; border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.35); background: rgba(255,255,255,0.1);
@@ -345,11 +365,12 @@
           </article>
         </div>
         <ul class="list check" style="margin-top:0.85rem">
-          <li><strong>4 conteúdos/mês</strong> — blog + páginas locais</li>
-          <li><strong>Auditoria + on-page</strong> em até 10 páginas estratégicas</li>
-          <li><strong>Monitoramento quinzenal</strong> + reunião mensal com o squad Billions</li>
+          <li><strong>4 posts/mês</strong> — 2 novos + 2 atualizações (50% da auditoria: 8 posts)</li>
+          <li><strong>On-page + técnico essencial</strong> — páginas prioridade, schema, sitemap, robots, llms.txt</li>
+          <li><strong>GEO + SEO local</strong> — FAQ/schema para IA + Perfil Google da fábrica</li>
+          <li><strong>Monitoramento mensal</strong> + alinhamento com o squad Billions</li>
         </ul>
-        <p class="stakes-callout" style="font-weight:500">Primeiros 90 dias: corrigir depoimentos e titles, dominar Sorocaba, calendário editorial ativo.</p>
+        <p class="stakes-callout" style="font-weight:500">Escopo Essencial = metade da auditoria SEO/GEO (8 posts · 16h). Aqui: prioridade comercial sem dobrar a operação.</p>
       </div>
     </section>
 
@@ -361,25 +382,25 @@
             <h2>Entregáveis V4</h2>
             <div class="gold-line"></div>
             <ul class="list check">
-              <li>Profissional SEO + Account Manager (squad Billions)</li>
-              <li>Auditoria técnica + on-page (10 páginas)</li>
-              <li>Pesquisa de palavras-chave por intenção</li>
-              <li>4 conteúdos/páginas otimizadas por mês</li>
-              <li>SEO local + Perfil Google (fábrica + filiais)</li>
-              <li>Schema FAQ + conteúdo GEO para IA</li>
-              <li>Link building leve + relatório mensal</li>
+              <li>SEO + AM no squad Billions (~8h/mês)</li>
+              <li>4 posts/mês: <strong>2 novos + 2 atualizações</strong></li>
+              <li>On-page em páginas-chave (títulos, meta, H1, alt, interlink)</li>
+              <li>Técnico essencial: schema, sitemap, robots, llms.txt</li>
+              <li>GEO: heading + FAQ para citação em IA</li>
+              <li>SEO local: Perfil Google da fábrica Sorocaba</li>
+              <li>Relatório mensal (GSC / posição / tráfego)</li>
             </ul>
           </div>
           <div class="glass">
-            <p class="eyebrow">Fora do escopo</p>
-            <h2>Não incluso</h2>
+            <p class="eyebrow">Fora do escopo · metade</p>
+            <h2>Não incluso nesta versão</h2>
             <div class="gold-line"></div>
             <ul class="list excluded">
-              <li>Mídia paga — tráfego e distribuição (contrato atual)</li>
-              <li>Redesign do site ou correção de Lorem Ipsum</li>
-              <li>Social Media, CRM, Bot SDR e réguas</li>
-              <li>Produção de fotos de fábrica e cases</li>
-              <li>Licenças de ferramentas externas</li>
+              <li>Pacote full auditoria: 8 posts/mês e 16h</li>
+              <li>Otimização contínua de <em>todas</em> as páginas</li>
+              <li>CWV / performance profunda + link building agressivo</li>
+              <li>Landings locais das 11 filiais (só fábrica no Essencial)</li>
+              <li>Redesign, Social, CRM, fotos e mídia paga</li>
             </ul>
           </div>
         </div>
@@ -388,23 +409,50 @@
 
     <section id="investimento" data-slide="7">
       <div class="inner glass">
-        <p class="eyebrow">Investimento</p>
-        <h2>Ativar o segundo motor</h2>
+        <p class="eyebrow">Investimento · Contrato atualizado</p>
+        <h2>Growth Pack + SEO Essencial · booking 12×</h2>
         <div class="gold-line"></div>
         <article class="plan-hero">
-          <div class="plan-label">EXECUTAR · Plano 2 · Recomendado</div>
-          <h3>SEO Growth</h3>
-          <p class="plan-sub">Orgânico + Google local + GEO para IA</p>
-          <div class="plan-price">R$ 3.600 <small>/mês</small></div>
-          <p class="plan-total">TCV 12 meses: <strong style="color:#fff">R$ 43.200</strong></p>
+          <div class="plan-label">EXECUTAR · Visão do contrato · 12 meses</div>
+          <h3>Fee total mensal</h3>
+          <p class="plan-sub">Âncora auditoria SEO/GEO: R$ 6.500/mês · 8 posts — aqui 50% de valor e escopo</p>
+          <div class="plan-price">R$ 8.450 <small>/mês</small></div>
+          <p class="plan-total">TCV 12 meses: <strong style="color:#fff">R$ 101.400</strong></p>
+          <span class="booking-pill">Booking · 12× de R$ 8.450 no cartão</span>
+          <table class="contract-table" aria-label="Composição do contrato">
+            <thead>
+              <tr>
+                <th>Linha</th>
+                <th class="num">Mensal</th>
+                <th class="num">12 meses</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Growth Pack</strong> · mídia + funil (contrato atual)</td>
+                <td class="num">R$ 5.200</td>
+                <td class="num">R$ 62.400</td>
+              </tr>
+              <tr>
+                <td><strong>SEO/GEO Essencial</strong> · 50% da auditoria (4 posts · 8h)</td>
+                <td class="num">R$ 3.250</td>
+                <td class="num">R$ 39.000</td>
+              </tr>
+              <tr class="total">
+                <td>Total contrato atualizado</td>
+                <td class="num">R$ 8.450</td>
+                <td class="num">R$ 101.400</td>
+              </tr>
+            </tbody>
+          </table>
           <ul>
-            <li>Integrado ao squad que já gerencia a conta</li>
-            <li>Kickoff em até 5 dias úteis após assinatura</li>
-            <li>Complementa o breakeven: segundo motor sem depender só de mídia paga</li>
+            <li>Verba de mídia (~R$ 5k) continua à parte do fee</li>
+            <li>Kickoff SEO em até 5 dias úteis após assinatura</li>
+            <li>Upgrade para full (8 posts · R$ 6.500) fica como expansão futura</li>
           </ul>
         </article>
         <div class="cta-box">
-          <p>Aprovar o <strong>SEO Growth</strong> para quem pesquisa container habitável ou fabricante em SP encontrar a Compass — no Google, no Maps e na IA. Alinhar até <strong>julho de 2026</strong>.</p>
+          <p>Fechar o <strong>contrato atualizado em booking 12×</strong> — Growth Pack que já breakevou + SEO Essencial para o segundo motor. Alinhar até <strong>julho de 2026</strong>.</p>
         </div>
       </div>
     </section>
